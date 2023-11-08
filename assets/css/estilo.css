@@ -1,0 +1,710 @@
+:root{
+	--prim: #437eb4;
+	--sec: #4756b1;
+	--branco: #ffffff;
+	
+}
+*{
+	margin: 0%;
+	padding: 0%;
+}
+
+
+/*Header*/
+.logo{
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+
+header nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family: Tahoma;	
+	height: 10vh;
+}
+
+.nav-list{
+	list-style: none;
+	display: flex;
+}
+
+.nav-list li {
+	letter-spacing: 3px;
+	margin-left: 32px;
+}
+
+.mobile-menu{
+	cursor: pointer;
+	display: none;
+}
+.mobile-menu div{
+	width: 32px;
+	height: 2px;
+	background: #ffffff;
+	margin: 8px;
+	transition: 0.3s;
+}
+
+.nav-list.active {
+	transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.mobile-menu.active .line-1{
+	transform: rotate(-45deg) translate(-7px, 8px);
+}
+.mobile-menu.active .line-2 {
+	opacity: 0;
+}
+.mobile-menu.active .line-3 {
+	transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*----------------------Main--------------------------------*/
+
+body {
+	background: linear-gradient(50deg, #ebedf7, #daddef);
+	background-attachment: fixed;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	color: var(--branco);
+	font-size: 2.5;
+}
+
+form {
+	margin-top: 3vh;
+	margin-bottom: 4vh;
+}
+
+
+
+label,
+input {
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+
+label {
+	font-weight: bold;
+	border: #000;
+
+}
+
+input {
+	padding: 1vh;
+	font-size: 1.0vh;
+	margin-bottom: 2vh;
+}
+
+/*------Tela de Login------------*/
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+
+
+
+/*-----------------ids----------------------*/
+#containerVendasLogo {
+	width: 100%;
+	height: 20%;
+	background-color: var(--sec);	
+	border-radius: 3vh;
+}
+
+#footerLog a{
+		color: #ebedf7;
+}
+
+#footerLog a:hover{
+	color: #4756b1;
+}
+
+
+
+/*-------------------classes-----------------------------*/
+
+
+.label{
+	color: #000;
+	border: #000;
+
+}
+.input{
+	background-color: #ffffff
+}
+
+.paragrafo p {
+	color: var(--branco);
+}
+
+.esqecSenha a {
+	color: #000;
+	text-decoration: none;
+	font-size: 1.8vh;
+}
+
+.esqecSenha a:hover {
+	color: #1aa9b3;
+	text-decoration: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+input{
+	border-radius: 1vh;
+}
+
+
+/*------------------------footer------------------------*/
+#footer_content{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1{
+	margin-bottom: 0.75rem;
+}
+
+#footer_social_midia{
+	display: flex;
+	gap: 2rem;
+	margin-top: 1.5rem;
+}
+#footer_social_midia .footer-link{
+	height: 2.5rem;
+	width: 2.5rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: #f5f5f5;
+	transition: all 0.4s;
+	
+
+}
+
+#footer_social_midia .footer-link:hover{
+	opacity: 0,8;
+}
+#footer_social_midia .footer-link i{
+	font-size: 1.25rem;
+}
+
+#instagram{
+	border-radius: 50px;
+	background: linear-gradient(#7f37c9,#ff2992,#ff9807);
+	
+}
+
+#facebook{
+	background-color: #4267b3;
+}
+
+#whatsapp{
+	background-color: #25d366;
+}
+.footer-list{
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	list-style: none;
+}
+.footer-list .footer-link{
+	color: #f5f5f5;
+}
+
+.footer-list .footer-link:hover{
+	color: #1aa9b3;
+}
+
+#footer_subscribe{
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+#input_group{
+	display:flex;
+	align-items: center;
+	background-color: 4px;
+	
+}
+
+#input_group input{
+	all: unset;
+	padding: 0.75rem;
+	width: 100%;
+	font-size: 1.25rem;
+	background-color: #fafafa;
+	border-radius: 5px;
+	height: 10px;
+}
+
+#input_group button{
+	background-color: transparent;
+	border: none;
+	padding: 0px 1rem;
+	font-size: 1rem;
+	height: 100%;
+	border-radius: 0px 4px 4px 0px;
+	cursor: pointer;
+}
+
+#input_group button:hover{
+	opacity: 0.8;
+}
+
+#footer_copyright{
+	display: flex;
+	justify-content: center;
+	font-size: 0.9rem;
+	padding: 1.5rem;
+	font-weight: 100;
+}
+
+
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	#footer_content{
+		grid-template-columns: (2,1fr);
+		gap: 2rem;
+	}
+
+	body{
+		overflow-x: hidden;
+	}
+	.nav-list{
+		position: absolute;
+		top: 8vh;
+		right: 0;
+		width: 50vw;
+		height: 92vh;
+		background: linear-gradient(45deg, var(--prim), var(--sec));
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+	}
+	.nav-list li {
+		margin-left: 0;
+		opacity: 0;
+	}
+	.mobile-menu {
+		display: block;
+	}
+
+	#containerLogin {
+		width: 17.7vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		margin-top: 10vh;
+		text-align: center;
+
+
+	}
+	
+	#footerLog {
+		background-color: var(--prim);
+		color: var(--branco);
+		border-top: var(--sec);
+		text-align: center;
+		padding: 2vh;		
+		width: 100%;
+		height: 30vh;
+		line-height: 10vh;	
+		font-size: 1vh;	
+	}
+
+
+	#containerVendasLogo {
+	
+		height: 30vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		text-align: center;
+		font-size: 2vh;
+	
+	}
+	.iframe{
+		width: 100%;
+		height: 95vh;	
+		margin-top: 100%;
+		
+	}
+	.iframeSite{
+		font-size: 2vh;
+	}
+	.tab{
+		width: 0vh;
+
+	}
+	.divTab{
+		margin: 4vh;
+	}
+
+	.card{
+		width: 80%; 
+		margin-left: 10%; 
+		border: 0.50vh #4756b1 solid;
+		border-radius: 0.50vh;
+	}
+
+	header{
+		background: linear-gradient(50deg, var(--prim), var(--sec));
+		height: 10vh;
+	
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	
+	body{
+		overflow-x: hidden;
+	}
+	.nav-list{
+		position: absolute;
+		top: 8vh;
+		right: 0;
+		width: 50vw;
+		height: 92vh;
+		background: linear-gradient(45deg, var(--prim), var(--sec));
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+	}
+	.nav-list li {
+		margin-left: 0;
+		opacity: 0;
+	}
+	.mobile-menu {
+		display: block;
+	}
+
+	#containerLogin {
+		width: 17.5vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		margin-top: 10vh;
+		text-align: center;
+
+
+	}
+	#footerLog {
+		background-color: var(--prim);
+		color: var(--branco);
+		border-top: var(--sec);
+		text-align: center;
+		padding: 6vh;		
+		width: 100%;
+		height: 45vh;
+				
+		font-size: 1.5vh;
+	}
+	
+	#containerVendasLogo {
+		height: 20vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		text-align: center;
+	}
+	.iframe{
+		width: 128vh;
+		height: 30vh;
+		margin: 7vh 0;
+		
+		
+	}
+	.tab{
+		width: 70vh;
+	}
+	.divTab{
+		margin: 10vh;
+	}
+
+	.card{
+		width: 80%; 
+		margin-left: 10%; 
+		border: 0.50vh #4756b1 solid;
+		border-radius: 0.50vh;
+	}
+
+	header{
+		background: linear-gradient(50deg, var(--prim), var(--sec));
+		height: 20vh;
+	
+	}
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	body{
+		overflow-x: hidden;
+	}
+	.nav-list{
+		position: absolute;
+		top: 8vh;
+		right: 0;
+		width: 50vw;
+		height: 92vh;
+		background: linear-gradient(45deg, var(--prim), var(--sec));
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+	}
+	.nav-list li {
+		margin-left: 0;
+		opacity: 0;
+	}
+	.mobile-menu {
+		display: block;
+	}
+	#containerLogin {
+		width: 27vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		margin-top: 10vh;
+		text-align: center;
+
+
+	}
+	#footerLog {
+		background-color: var(--prim);
+		color: var(--branco);
+		border-top: var(--sec);
+		text-align: center;
+		padding: 6vh;		
+		width: 100%;
+		height: 25vh;
+		line-height: 10vh;		
+		padding-bottom: 1vh;
+	}
+	
+	
+	#containerVendasLogo {
+	
+		height: 20vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		text-align: center;
+	
+	
+	}
+	.iframe{
+		width: 128vh;
+		height: 80vh;
+		margin: 5vh 0;
+		
+		
+	}
+	.tab{
+		width: 70vh;
+	}
+	.divTab{
+		margin: 10vh;
+	}
+
+	.card{
+		width: 70%; 
+		margin-left: 15%; 
+		border: 0.50vh #4756b1 solid;
+		border-radius: 0.50vh;
+	}
+
+	header{
+		background: linear-gradient(50deg, var(--prim), var(--sec));
+		height: 20vh;
+	
+	}
+	
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+	body{
+		overflow-x: hidden;
+	}
+	.nav-list{
+		position: absolute;
+		top: 8vh;
+		right: 0;
+		width: 50vw;
+		height: 92vh;
+		background: linear-gradient(45deg, var(--prim), var(--sec));
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+	}
+	.nav-list li {
+		margin-left: 0;
+		opacity: 0;
+	}
+	.mobile-menu {
+		display: block;
+	}
+
+	#containerLogin {
+		width: 25vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		margin-top: 10vh;
+		text-align: center;
+
+
+	}
+	#footerLog {
+		background-color: var(--prim);
+		color: var(--branco);
+		border-top: var(--prim);
+		text-align: center;
+		padding: 6vh;		
+		width: 100%;
+		height: 20vh;
+		line-height: 1vh;		
+	}
+	
+	
+	#containerVendasLogo {
+	
+		height: 20vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		text-align: center;
+	
+	
+	}
+	.iframe{
+		width: 128vh;
+		height: 80vh;
+		margin: 5vh 0;
+		
+		
+	}
+
+	.tab{
+		width: 70vh;
+	}
+
+	.divTab{
+		margin: 10vh;
+	}
+
+	.card{
+		width: 60%; 
+		margin-left: 20%; 
+		border: 0.50vh #4756b1 solid;
+		border-radius: 0.50vh;
+	}
+
+	header{
+		background: linear-gradient(50deg, var(--prim), var(--sec));
+		height: 20vh;
+	
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+
+	#containerLogin {
+		width: 60vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		margin-top: 10vh;
+		text-align: center;
+	}
+
+	
+	#footerLog {
+		background: linear-gradient(50deg, var(--prim), var(--sec)); 
+		color: var(--branco);
+		border-top: var(--sec);
+		text-align: center;
+		padding: 10vh;		
+		width: 100%;
+		height: 100%;
+		line-height: 10vh;		
+	}
+	
+	#containerVendasLogo {
+	
+		height: 25vh;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2vh 3vh;
+		text-align: center;
+	
+	
+	}
+	.iframe{
+		width: 100vh;
+		height: 120vh;
+		margin: 5vh 0;
+		
+		
+	}
+
+	.tab{
+		width: 70vh;
+	}
+
+	.divTab{
+		margin: 10vh;
+	}
+
+	.card{
+		width: 60%; 
+		margin-left: 20%; 
+		border: 0.50vh #4756b1 solid;
+		border-radius: 0.50vh;
+	}
+	header{
+		background: linear-gradient(50deg, var(--prim), var(--sec));
+		height: 12vh;
+	
+	}
+	footer{
+		background-color: var(--prim);
+	}
+	
+
+}
