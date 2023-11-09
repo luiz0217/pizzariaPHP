@@ -7,7 +7,7 @@ class ClientesModel
     public static function getClientes()
     {
         include"connection.php";
-        $sql = $pdo->prepare('SELECT id,nome FROM clientes;');
+        $sql = $pdo->prepare('SELECT * FROM clientes;');
         $sql->execute();
         return $sql->fetchAll(\PDO::FETCH_ASSOC);
     }

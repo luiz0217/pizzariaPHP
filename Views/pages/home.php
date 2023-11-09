@@ -21,8 +21,9 @@
 
     <header>
         <nav>
-            <a class="logo" href="/" style="color: #fff;marginRight: 20%;textDecoration: none"><img
-                    src="<?php echo INCLUDE_PATH ?>assets/imagens/logo.png" class="img-fluid" width="10%" alt="" />BOBBY JONES™</a>
+            <a class="logo" href="<?php echo INCLUDE_PATH ?>" style="color: #fff;marginRight: 20%;textDecoration: none"><img
+                    src="<?php echo INCLUDE_PATH ?>assets/imagens/logo.png" class="img-fluid" width="10%" alt="" />BOBBY
+                JONES™</a>
             <div class="mobile-menu">
                 <div class="line-1"></div>
                 <div class="line-2"></div>
@@ -41,7 +42,7 @@
         <h4>Meal Time</h4>
         <form method="post">
             <label class="label" for="Login">Login</label>
-            <input class="input" type="text" name="Login" placeholder="Digite seu Login"/>
+            <input class="input" type="text" name="Login" placeholder="Digite seu Login" />
             <label class="label" for="password">Senha</label>
             <input class="input" type="password" name="password" placeholder="Digite sua Senha" />
 
@@ -54,7 +55,8 @@
             </div>
 
             <div>
-                <input type="submit" class="btn btn-outline-primary btn-lg" value="Login" name="login" style="width: 13vh"></input>
+                <input type="submit" class="btn btn-outline-primary btn-lg" value="Login" name="login"
+                    style="width: 13vh"></input>
             </div>
 
         </form>
@@ -141,10 +143,7 @@
                 </div>
             </div>
         </div>
-        <div id="footer_copyright">
-            ©
-            2023 todos os diretos reservados
-        </div>
+        <div id="footer_copyright"> © 2023 todos os diretos reservados </div>
     </footer>
 </body>
 

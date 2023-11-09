@@ -1,14 +1,14 @@
 <div>
-    <section style="marginTop: 2%">
+    <section style="margin: 10px;display: flex;justify-content: center;">
         <Table border="2px">
             <thead>
                 <tr>
-                    <th style="padding: 5px;">Retirada</th>
-                    <th style="padding: 5px;">Tamanho</th>
-                    <th style="padding: 5px;">Sabor</th>
-                    <th style="padding: 5px;">hora</th>
-                    <th style="padding: 5px;">cliente</th>
-                    <th style="padding: 5px;">vendedor</th>
+                    <th style="padding: 5px;font-weight: 800;">Retirada</th>
+                    <th style="padding: 5px;font-weight: 800;">Tamanho</th>
+                    <th style="padding: 5px;font-weight: 800;">Sabor</th>
+                    <th style="padding: 5px;font-weight: 800;">hora</th>
+                    <th style="padding: 5px;font-weight: 800;">cliente</th>
+                    <th style="padding: 5px;font-weight: 800;">vendedor</th>
                     <th style="padding: 5px;"></th>
                 </tr>
             </thead>
@@ -17,7 +17,7 @@
                     $pedidos = \Models\PedidosModel::checkPedidos();
                     foreach ($pedidos as $key => $value) {
                         echo"<tr>";
-                        echo"<th style='padding: 5px;'>";
+                        echo"<th style='padding: 5px;font-weight: 400;'>";
                         if ($value["retirada"] == "B") {
                             echo "Balcão";
                         }
@@ -25,7 +25,7 @@
                             echo "Entrega";
                         }
                         echo"</th>";
-                        echo"<th style='padding: 5px;'>";
+                        echo"<th style='padding: 5px;font-weight: 400;'>";
                         if ($value["tamanho"] == "P") {
                             echo "Pequena";
                         }
@@ -36,16 +36,16 @@
                             echo "Grande";
                         }
                         echo"</th>";
-                        echo"<th style='padding: 5px;'>";
+                        echo"<th style='padding: 5px;font-weight: 400;'>";
                         echo $value['sabor'];
                         echo"</th>";
-                        echo"<th style='padding: 5px;'>";
+                        echo"<th style='padding: 5px;font-weight: 400;'>";
                         echo $value['horaPedido'];
                         echo"</th>";
-                        echo"<th style='padding: 5px;'>";
+                        echo"<th style='padding: 5px;font-weight: 400;'>";
                         echo \Models\ClientesModel::getClientesByID($value['clientID']);
                         echo"</th>";
-                        echo"<th style='padding: 5px;'>";
+                        echo"<th style='padding: 5px;font-weight: 400;'>";
                         echo(\Models\VendedorModel::getVendedorByID($value['vendedorID']));
                         echo"</th>";
                         echo "<th>";

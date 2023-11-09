@@ -13,7 +13,8 @@ class Aplication
             $controller->executar();
         }
         else{
-            die('não existe controlador');
+            include"Views/pages/404.php";
+            die();
         }
     }
 }

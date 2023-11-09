@@ -5,7 +5,7 @@ class VendedorModel{
 
     public static function getVendedor(){
         include"connection.php";
-        $sql = $pdo->prepare('SELECT id,nome FROM vendedor;');
+        $sql = $pdo->prepare('SELECT * FROM vendedor;');
         $sql->execute();
         return $sql->fetchAll(\PDO::FETCH_ASSOC);
     }

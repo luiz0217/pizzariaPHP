@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo INCLUDE_PATH ?>assets/js/mobile-navbar.js"></script>
+    <script src="assets/js/mobile-navbar.js"></script>
 
 </head>
 
@@ -39,37 +39,42 @@
                     style="marginLeft: 25%;padding-top: 10vh;">
                     <ul class="nav justify-content-center nav-pills nav-fill" style="listStyle: none;gap: 10px">
                         <li class="nav-item " style="width: 15%;">
-                        <div style="display: flex;">
-                            <img src="<?php echo INCLUDE_PATH; ?>assets/imagens/pessoa.png" width="25%" height="25%">
-                            <a type="button" href="<?php INCLUDE_PATH ?>clientes" class="btn btn-outline-dark btn-l"
-                                style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Cadastros</a>
-                        </div>
+                            <div style="display: flex;">
+                                <img src="assets/imagens/pessoa.png" width="25%" height="25%">
+                                <a type="button" href="<?php INCLUDE_PATH ?>clientes" class="btn btn-outline-dark btn-l"
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Cadastros</a>
+                            </div>
                         </li>
 
                         <li class="nav-item " style="width: 15%;">
-                        <div style="display: flex;">
-                            <img src="<?php echo INCLUDE_PATH; ?>assets/imagens/pitzza.png" width="25%" height="25%">
-                            <a type="button" href="<?php INCLUDE_PATH ?>pedido" class="btn btn-outline-dark btn-l"
-                                style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Fazer Pedido</a>
-                        </div>
+                            <div style="display: flex;">
+                                <img src="assets/imagens/pitzza.png" width="25%" height="25%">
+                                <a type="button" href="<?php INCLUDE_PATH ?>pedido" class="btn btn-outline-dark btn-l"
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Fazer
+                                    Pedido</a>
+                            </div>
                         </li>
 
                         <li class="nav-item " style="width: 15%;">
-                        <div style="display: flex;">
-                            <img src="<?php echo INCLUDE_PATH; ?>assets/imagens/lupa.png" width="25%" height="25%">
-                            <a type="button" href="<?php INCLUDE_PATH ?> vendedor" class="btn btn-outline-dark btn-lg"
-                                style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Vendedor</a>
-                        </div>
+                            <div style="display: flex;">
+                                <img src="assets/imagens/lupa.png" width="25%" height="25%">
+                                <a type="button" href="<?php INCLUDE_PATH ?> vendedor"
+                                    class="btn btn-outline-dark btn-lg"
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Vendedor</a>
+                            </div>
                         </li>
 
                         <li class="nav-item " style="width: 15%;">
-                        <div style="display: flex;">
-                            <img src="<?php echo INCLUDE_PATH; ?>assets/imagens/cozinha.png" width="25%" height="25%">
-                            <a type="button" href="<?php INCLUDE_PATH ?> cozinha" class="btn btn-outline-dark btn-lg"
-                                style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Cozinha</a>
-                        </div>
+                            <div style="display: flex;">
+                                <img src="assets/imagens/cozinha.png" width="25%" height="25%">
+                                <a type="button" href="<?php INCLUDE_PATH ?> cozinha"
+                                    class="btn btn-outline-dark btn-lg"
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Cozinha</a>
+                            </div>
                         </li>
-
+                        <li class="nav-item ">
+                            <a href="<?php INCLUDE_PATH ?> config" class="btn btn-outline-dark btn-lg"> <i class='fas fa-cog'></i> </a>
+                        </li>
                     </ul>
                 </div>
             </nav>

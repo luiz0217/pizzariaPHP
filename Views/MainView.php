@@ -9,7 +9,6 @@ class MainView
 
 
     const titulo = 'Projeto MVC';
-    public $menuItens = ['Home','Sobre','Contato'];
 
     public function __construct($fileName,$header = 'header.php',$footer = 'footer.php'){
         $this->fileName = $fileName;
