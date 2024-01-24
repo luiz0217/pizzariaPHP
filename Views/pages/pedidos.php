@@ -22,13 +22,37 @@
             <br><br>
             <label for="tamanho" style="margin: 0;">Tamanho</label>
             <select name="tamanho">
-                <option value="G">Grande</option>
-                <option value="M">Média</option>
-                <option value="P">Pequena</option>
+                <?php
+                $resp = \Models\PedidosModel::getTamanhos();
+                foreach ($resp as $key => $value) {
+                    echo '<option value=' . $value['id'] . '>';
+                    echo $value['nome'];
+                    echo '</option>';
+                }
+                ?>
             </select>
             <br><br>
             <label for="sabor" style="margin: 0;">Sabor</label>
-            <input type="text" name="sabor" placeholder="sabor">
+            <?php
+            $resp = \Models\saborModel::getSabores();
+            foreach ($resp as $key => $value) {
+                echo '<div style="display: flex;align-items: center;">';
+                echo '<input type="checkbox" name="sabor[' . $value['id'] . '] value="'.$value['id'].'" id="sab'.$value['id'].'" style="width:15px;height:15px;">';
+                echo '<label for="sab'.$value['id'].'">'. $value['nome'].'</label>';
+                echo '</div>';
+            }
+            ?>
+            <br>
+            <label for="sabor" style="margin: 0;">Extras</label>
+            <?php
+            $resp = \Models\extraModel::getExtras();
+            foreach ($resp as $key => $value) {
+                echo '<div style="display: flex;align-items: center;">';
+                echo '<input type="checkbox" name="extra[' . $value['id'] . '] value="'.$value['id'].'" id="ex'.$value['id'].'" style="width:15px;height:15px;">';
+                echo '<label for="ex'.$value['id'].'">'. $value['nome'].'</label>';
+                echo '</div>';
+            }
+            ?>
             <br>
             <label style="margin: 0;">vendedor</label>
             <select name="vendedor">
@@ -45,12 +69,12 @@
             <label style="margin: 0;">cliente</label>
             <select name="cliente">
                 <?php
-                    $resp = \Models\ClientesModel::getClientes();
-                    foreach ($resp as $key => $value) {
-                        echo '<option value='. $value['id'] . '>';
-                        echo $value['nome'];
-                        echo '</option>';
-                    }
+                $resp = \Models\ClientesModel::getClientes();
+                foreach ($resp as $key => $value) {
+                    echo '<option value=' . $value['id'] . '>';
+                    echo $value['nome'];
+                    echo '</option>';
+                }
                 ?>
             </select>
             <br><br>

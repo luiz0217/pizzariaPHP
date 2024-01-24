@@ -11,7 +11,10 @@ class PedidoController
 
     public function executar(){
         if(isset($_POST['cadastrar'])){
-            \Models\PedidosModel::gerarPedidos($_POST['retirada'],$_POST['tamanho'],$_POST['sabor'],$_POST['cliente'],$_POST['vendedor']);
+            echo '<pre>';
+            print_r($_POST);
+            echo '</pre>';
+            \Models\PedidosModel::gerarPedidos($_POST['retirada'],$_POST['tamanho'],[$_POST['sabor'],$_POST['extra']],$_POST['cliente'],$_POST['vendedor']);
         }
         $this->view->render();
     }

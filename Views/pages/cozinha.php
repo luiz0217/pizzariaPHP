@@ -6,6 +6,7 @@
                     <th style="padding: 5px;font-weight: 800;">Retirada</th>
                     <th style="padding: 5px;font-weight: 800;">Tamanho</th>
                     <th style="padding: 5px;font-weight: 800;">Sabor</th>
+                    <th style="padding: 5px;font-weight: 800;">Preço</th>
                     <th style="padding: 5px;font-weight: 800;">hora</th>
                     <th style="padding: 5px;font-weight: 800;">cliente</th>
                     <th style="padding: 5px;font-weight: 800;">vendedor</th>
@@ -40,6 +41,9 @@
                         echo $value['sabor'];
                         echo"</th>";
                         echo"<th style='padding: 5px;font-weight: 400;'>";
+                        echo $value['preco'];
+                        echo"</th>";
+                        echo"<th style='padding: 5px;font-weight: 400;'>";
                         echo $value['horaPedido'];
                         echo"</th>";
                         echo"<th style='padding: 5px;font-weight: 400;'>";
@@ -49,7 +53,7 @@
                         echo(\Models\VendedorModel::getVendedorByID($value['vendedorID']));
                         echo"</th>";
                         echo "<th>";
-                        echo "<a class='btn btn-danger' style='margin: 5px' href='?rem=".$value['id']."'>remover</a>";
+                        echo "<a class='btn btn-success' style='margin: 5px' href='?rem=".$value['id']."'>Concluir</a>";
                         echo "</th>";
                         echo"</tr>";
                     }

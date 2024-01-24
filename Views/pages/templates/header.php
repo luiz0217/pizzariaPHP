@@ -38,41 +38,37 @@
                 <div class="collapse navbar-collapse rounded-end-circle" id="nav-principal"
                     style="marginLeft: 25%;padding-top: 10vh;">
                     <ul class="nav justify-content-center nav-pills nav-fill" style="listStyle: none;gap: 10px">
-                        <li class="nav-item " style="width: 15%;">
+                        <li class="nav-item">
                             <div style="display: flex;">
-                                <img src="assets/imagens/pessoa.png" width="25%" height="25%">
                                 <a type="button" href="<?php INCLUDE_PATH ?>clientes" class="btn btn-outline-dark btn-l"
-                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Cadastros</a>
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; font-size: 2.5vh;"><i class='fas fa-user-alt'></i> Cadastros</a>
                             </div>
                         </li>
 
-                        <li class="nav-item " style="width: 15%;">
+                        <li class="nav-item">
                             <div style="display: flex;">
-                                <img src="assets/imagens/pitzza.png" width="25%" height="25%">
                                 <a type="button" href="<?php INCLUDE_PATH ?>pedido" class="btn btn-outline-dark btn-l"
-                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Fazer
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; font-size: 2.5vh;"><i class='fas fa-pizza-slice'></i> Fazer
                                     Pedido</a>
                             </div>
                         </li>
 
-                        <li class="nav-item " style="width: 15%;">
+                        <li class="nav-item">
                             <div style="display: flex;">
-                                <img src="assets/imagens/lupa.png" width="25%" height="25%">
                                 <a type="button" href="<?php INCLUDE_PATH ?> vendedor"
                                     class="btn btn-outline-dark btn-lg"
-                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Vendedor</a>
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; font-size: 2.5vh;"><i class='fas fa-address-card'></i> Vendedor</a>
                             </div>
                         </li>
 
-                        <li class="nav-item " style="width: 15%;">
+                        <li class="nav-item">
                             <div style="display: flex;">
-                                <img src="assets/imagens/cozinha.png" width="25%" height="25%">
                                 <a type="button" href="<?php INCLUDE_PATH ?> cozinha"
                                     class="btn btn-outline-dark btn-lg"
-                                    style="borderColor: #001e30; width: 22vh; height: 6vh; fontSize: 2.5vh;">Cozinha</a>
+                                    style="borderColor: #001e30; width: 22vh; height: 6vh; font-size: 2.5vh;"><i class='fas fa-search'></i> Cozinha</a>
                             </div>
                         </li>
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <a href="<?php INCLUDE_PATH ?> config" class="btn btn-outline-dark btn-lg"> <i class='fas fa-cog'></i> </a>
                         </li>
                     </ul>

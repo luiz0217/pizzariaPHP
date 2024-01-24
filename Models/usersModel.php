@@ -11,6 +11,14 @@ class usersModel
             return $sql->fetchAll(\PDO::FETCH_ASSOC);
         }
     }
+
+    public static function updatePass($id, $sen){
+        include"connection.php";
+        if($pdo != null){
+            $sql = $pdo->prepare("UPDATE users SET senha = ? WHERE id = ?;");
+            $sql->execute([$sen,$id]);
+        }
+    }
 }
 
 
