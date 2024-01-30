@@ -13,7 +13,7 @@ class HomeController
     public function executar(){
         if(isset($_POST['login'])){
             if($_POST['password'] != '' && $_POST['Login'] != ''){
-                \Models\loginModel::loginCheck($_POST['Login'],$_POST['password']);
+                \Models\usersModel::loginCheck($_POST['Login'],$_POST['password']);
             }
             else{
                 echo '<script> alert("preencha todos os campos") </script>';
@@ -25,4 +25,3 @@ class HomeController
 
 
 
-?>

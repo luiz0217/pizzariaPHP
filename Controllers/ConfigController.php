@@ -9,6 +9,9 @@ class ConfigController
         if(isset($_GET['opt'])){
             switch($_GET['opt']){
                 case 'users':
+                    if(isset($_POST['addUser'])){
+                        \Models\usersModel::addUser($_POST['login'],$_POST['sen']);
+                    }
                     $this->view = new \Views\MainView('users');        
                     break;
                 case 'vendors':
@@ -40,6 +43,9 @@ class ConfigController
                         \Models\extraModel::editExtra($_POST['id'],$_POST['nome'],$_POST['preco']);
                     }
                     $this->view = new \Views\MainView('editExtra');
+                case 'logOut':
+                    \Models\usersModel::logOut();
+                    break;
             }
         }
         else{
